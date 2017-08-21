@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router/router'
-import './assets/font-awesome/css/font-awesome.min.css'
+// import './assets/font-awesome/css/font-awesome.min.css'
 import VueBlu from 'vue-blu'
 import '../node_modules/vue-blu/dist/css/vue-blu.min.css'
 import './assets/css/common.css'

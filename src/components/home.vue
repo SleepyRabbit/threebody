@@ -33,7 +33,7 @@
     </div>
 
     <div class="banner">
-
+      <button class="button is-primary" @click="fade">fade</button>
     </div>
 
   </div>
@@ -49,6 +49,12 @@ export default {
   methods: {
       onUser: function () {
         console.log('user!');
+      },
+      fade: function () {
+        this.$notify.open({
+          type: 'success',
+          title: `回调状态${status}`,
+        });
       }
   }
 }
