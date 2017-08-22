@@ -1,39 +1,48 @@
 <template>
-  <div class="home flex flex-direction-column">
+  <div class="home box flex flex-direction-column">
+
     <div class="header flex-shrink-0 flex">
+      <Dropdown class="flex">
+        <Button type="text" style="height: 100%">hover 触发ssss
+          <Icon type="arrow-down-b"></Icon></Button>
+        <Dropdown-menu slot="list" style="width: 150px;">
+          <Dropdown-item>驴打滚</Dropdown-item>
+          <Dropdown-item>炸酱面</Dropdown-item>
+          <Dropdown-item>豆汁儿</Dropdown-item>
+          <Dropdown-item>冰糖葫芦</Dropdown-item>
+          <Dropdown-item>北京烤鸭</Dropdown-item>
+        </Dropdown-menu>
+      </Dropdown>
 
-      <dropdown trigger="hover">
-        <a class="button is-white" style='height: 100%;width:120px;'>
-          <span>Drop</span>
-          <span class="icon is-small">
-            <i class="fa fa-angle-down"></i>
-          </span>
-        </a>
-        <div slot="content">
-          <menus style="width: 150px;">
-            <menu-item icon="user" :click="onUser"><span>会员管理</span></menu-item>
-            <menu-item icon="ticket" to="/test">工单管理</menu-item>
-            <menu-item icon="lock">修改密码</menu-item>
-            <div class="divider"></div>
-            <menu-item icon="">退出</menu-item>
-          </menus>
-        </div>
-      </dropdown>
-
-      <dropdown trigger="hover">
-        <a class="button is-white" style='height: 100%;width:120px;'>
-          <span>Drop</span>
-          <span class="icon is-small">
-            <i class="fa fa-flag"></i>
-          </span>
-        </a>
-      </dropdown>
-
-
+      <Dropdown class="flex">
+        <Button type="text" style="height: 100%;">hover 触发ssss
+          <Icon type="arrow-down-b"></Icon></Button>
+        <Dropdown-menu slot="list" style="width: 150px;">
+          <Dropdown-item>驴打滚</Dropdown-item>
+          <Dropdown-item>炸酱面</Dropdown-item>
+          <Dropdown-item>豆汁儿</Dropdown-item>
+          <Dropdown-item>冰糖葫芦</Dropdown-item>
+          <Dropdown-item>北京烤鸭</Dropdown-item>
+        </Dropdown-menu>
+      </Dropdown>
     </div>
 
-    <div class="banner">
-      <button class="button is-primary" @click="fade">fade</button>
+    <!--<div class="banner flex">-->
+      <!--&lt;!&ndash;<img src="../assets/img/banner1.jpg" alt="" class="flex-grow-1 flex-shrink-0">&ndash;&gt;-->
+      <!--&lt;!&ndash;<span><i class="fa fa-user" style="float:left"></i></span>&ndash;&gt;-->
+    <!--</div>-->
+
+    <div class="content flex-shrink-0 flex-grow-1">
+      <Button>Default</Button>
+      <Button type="primary">Primary</Button>
+      <Button type="ghost">Ghost</Button>
+      <Button type="dashed">Dashed</Button>
+      <Button type="text">Text</Button>
+      <br><br>
+      <Button type="info">信息按钮</Button>
+      <Button type="success">成功按钮</Button>
+      <Button type="warning">警告按钮</Button>
+      <Button type="error">错误按钮</Button>
     </div>
 
   </div>
@@ -63,8 +72,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .home {
-  width: 100%;
-  height: 100%;
 }
 
 .header {
@@ -73,14 +80,27 @@ export default {
   border: 1px solid blue;
 }
 
+button {
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: rgb(245,245,245);
+}
+
 .banner {
-  flex-basis: 10%;
+  flex-basis: 60%;
+  /*background-color: rgb(123,217,243);*/
   /*height: 20%;*/
-  border-bottom: 1px solid red;
+  /*border-bottom: 1px solid red;*/
+}
+
+.tabs .tab-content {
+  margin: 0;
 }
 
 .content {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 /*.content {*/
