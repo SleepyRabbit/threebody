@@ -4,8 +4,8 @@
     <div class="header flex-shrink-0 flex">
       <Dropdown class="flex">
         <Button type="text" style="height: 100%">hover 触发ssss
-          <Icon type="arrow-down-b"></Icon></Button>
-        <Dropdown-menu slot="list" style="width: 150px;">
+          <Icon type="stats-bars"></Icon></Button>
+        <Dropdown-menu slot="list" >
           <Dropdown-item>驴打滚</Dropdown-item>
           <Dropdown-item>炸酱面</Dropdown-item>
           <Dropdown-item>豆汁儿</Dropdown-item>
@@ -25,6 +25,7 @@
           <Dropdown-item>北京烤鸭</Dropdown-item>
         </Dropdown-menu>
       </Dropdown>
+
     </div>
 
     <!--<div class="banner flex">-->
@@ -77,7 +78,7 @@ export default {
 .header {
   flex-basis: 8%;
   /*height: 20%;*/
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 
 button {
@@ -108,4 +109,10 @@ button:hover {
   /*!*flex-basis: 80%;*!*/
   /*border: 1px solid red;*/
 /*}*/
+</style>
+
+<style>
+  .ivu-select-dropdown {
+    margin: 0px !important;
+  }
 </style>
