@@ -1,56 +1,5 @@
 <template>
-  <div class="test box flex flex-direction-column">
-
-    <div class="header flex-shrink-0 flex">
-      <Menu mode="horizontal" :theme="theme" active-name="1" class="flex-">
-        <Menu-item name="1">
-          <Icon type="ios-paper"></Icon>
-          内容管理
-        </Menu-item>
-        <Menu-item name="2">
-          <Icon type="ios-people"></Icon>
-          用户管理
-        </Menu-item>
-        <Submenu name="3">
-          <template slot="title">
-            <!--<Icon type="stats-bars"></Icon>-->
-            统计............
-          </template>
-          <Menu-group title="使用">
-            <Menu-item name="3-1">新增和启动</Menu-item>
-            <Menu-item name="3-2">活跃分析</Menu-item>
-            <Menu-item name="3-3">时段分析</Menu-item>
-          </Menu-group>
-          <Menu-group title="留存">
-            <Menu-item name="3-4">用户留存</Menu-item>
-            <Menu-item name="3-5">流失用户</Menu-item>
-          </Menu-group>
-        </Submenu>
-        <Menu-item name="4">
-          <Icon type="settings"></Icon>
-          综合设置
-        </Menu-item>
-      </Menu>
-    </div>
-
-    <!--<div class="banner flex">-->
-    <!--&lt;!&ndash;<img src="../assets/img/banner1.jpg" alt="" class="flex-grow-1 flex-shrink-0">&ndash;&gt;-->
-    <!--&lt;!&ndash;<span><i class="fa fa-user" style="float:left"></i></span>&ndash;&gt;-->
-    <!--</div>-->
-
-    <div class="content flex-shrink-0 flex-grow-1">
-      <Button>Default</Button>
-      <Button type="primary">Primary</Button>
-      <Button type="ghost">Ghost</Button>
-      <Button type="dashed">Dashed</Button>
-      <Button type="text">Text</Button>
-      <br><br>
-      <Button type="info">信息按钮</Button>
-      <Button type="success">成功按钮</Button>
-      <Button type="warning">警告按钮</Button>
-      <Button type="error">错误按钮</Button>
-    </div>
-
+  <div class="test box">
   </div>
 </template>
 
@@ -59,7 +8,7 @@
     name: 'test',
     data () {
       return {
-        theme: 'light',
+        value1: 0,
       }
     },
     methods: {
@@ -67,10 +16,6 @@
         console.log('user!');
       },
       fade: function () {
-        this.$notify.open({
-          type: 'success',
-          title: `回调状态${status}`,
-        });
       }
     }
   }
@@ -112,6 +57,25 @@
 
   .tabs .tab-content {
     margin: 0;
+  }
+
+  .demo-carousel {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    flex-grow: 1;
+    flex-shrink: 0;
+    /*display: -webkit-box;      !* OLD - iOS 6-, Safari 3.1-6 *!*/
+    /*display: -moz-box;         !* OLD - Firefox 19- (buggy but mostly works) *!*/
+    /*display: -ms-flexbox;      !* TWEENER - IE 10 *!*/
+    /*display: -webkit-flex;     !* NEW - Chrome *!*/
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+
+  .demo-carousel img {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-self: center;
   }
 
   .content {
