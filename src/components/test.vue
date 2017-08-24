@@ -1,5 +1,27 @@
 <template>
   <div class="test box">
+    <Timeline>
+      <Timeline-item>
+        <p class="time">1976年</p>
+        <p class="content">Apple I 问世</p>
+      </Timeline-item>
+      <Timeline-item>
+        <p class="time">1984年</p>
+        <p class="content">发布 Macintosh</p>
+      </Timeline-item>
+      <Timeline-item>
+        <p class="time">2007年</p>
+        <p class="content">发布 iPhone</p>
+      </Timeline-item>
+      <Timeline-item>
+        <p class="time">2010年</p>
+        <p class="content">发布 iPad</p>
+      </Timeline-item>
+      <Timeline-item>
+        <p class="time">2011年10月5日</p>
+        <p class="content">史蒂夫·乔布斯去世</p>
+      </Timeline-item>
+    </Timeline>
   </div>
 </template>
 
@@ -8,15 +30,9 @@
     name: 'test',
     data () {
       return {
-        value1: 0,
       }
     },
     methods: {
-      onUser: function () {
-        console.log('user!');
-      },
-      fade: function () {
-      }
     }
   }
 </script>
@@ -24,67 +40,14 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .test {
+    padding: 10px;
   }
 
-  .header {
-    flex-basis: 8%;
-    /*height: 20%;*/
-    border: 1px solid blue;
-  }
-
-  .ivu-select-dropdown {
-    margin: 0 !important;
-  }
-
-  .ivu-menu-submenu:hover {
-    border: 0 !important;
-  }
-
-  button {
+  .time{
     font-size: 14px;
+    font-weight: bold;
   }
-
-  button:hover {
-    background-color: rgb(245,245,245);
+  .content{
+    padding-left: 5px;
   }
-
-  .banner {
-    flex-basis: 60%;
-    /*background-color: rgb(123,217,243);*/
-    /*height: 20%;*/
-    /*border-bottom: 1px solid red;*/
-  }
-
-  .tabs .tab-content {
-    margin: 0;
-  }
-
-  .demo-carousel {
-    /*width: 100%;*/
-    /*height: 100%;*/
-    flex-grow: 1;
-    flex-shrink: 0;
-    /*display: -webkit-box;      !* OLD - iOS 6-, Safari 3.1-6 *!*/
-    /*display: -moz-box;         !* OLD - Firefox 19- (buggy but mostly works) *!*/
-    /*display: -ms-flexbox;      !* TWEENER - IE 10 *!*/
-    /*display: -webkit-flex;     !* NEW - Chrome *!*/
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  }
-
-  .demo-carousel img {
-    width: 100%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    align-self: center;
-  }
-
-  .content {
-    /*border: 1px solid red;*/
-  }
-
-  /*.content {*/
-  /*width: 80%;*/
-  /*!*flex-basis: 80%;*!*/
-  /*border: 1px solid red;*/
-  /*}*/
 </style>

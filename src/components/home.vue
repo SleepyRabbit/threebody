@@ -50,16 +50,33 @@
     </div>
 
     <div class="content flex-shrink-0 flex-grow-1">
-      <Button>Default</Button>
-      <Button type="primary">Primary</Button>
-      <Button type="ghost">Ghost</Button>
-      <Button type="dashed">Dashed</Button>
-      <Button type="text">Text</Button>
-      <br><br>
-      <Button type="info">信息按钮</Button>
-      <Button type="success">成功按钮</Button>
-      <Button type="warning">警告按钮</Button>
-      <Button type="error">错误按钮</Button>
+      <Card style="margin: 20px; width: 350px; height: 350px; overflow-y: scroll;">
+        <p slot="title">
+          <Icon type="ios-paperplane-outline"></Icon>
+          Hints
+        </p>
+        <a href="#" slot="extra" @click.prevent="changeLimit">
+          <Icon type="ios-loop-strong"></Icon>
+          Refresh
+        </a>
+        <Timeline>
+          <Timeline-item v-for="customer in customers">
+            <p class="card_time">{{ customer.time }}</p>
+            <p class="card_content">{{ customer.content }}</p>
+          </Timeline-item>
+        </Timeline>
+      </Card>
+
+      <!--<Button>Default</Button>-->
+      <!--<Button type="primary">Primary</Button>-->
+      <!--<Button type="ghost">Ghost</Button>-->
+      <!--<Button type="dashed">Dashed</Button>-->
+      <!--<Button type="text">Text</Button>-->
+      <!--<br><br>-->
+      <!--<Button type="info">信息按钮</Button>-->
+      <!--<Button type="success">成功按钮</Button>-->
+      <!--<Button type="warning">警告按钮</Button>-->
+      <!--<Button type="error">错误按钮</Button>-->
     </div>
   </div>
 </template>
@@ -69,7 +86,29 @@ export default {
   name: 'home',
   data () {
     return {
-        value1: 0,
+      value1: 0,
+      customers: [
+        {
+            time: "1976年",
+            content: "Apple I 问世",
+        },
+        {
+          time: "1984年",
+          content: "发布 Macintosh",
+        },
+        {
+          time: "2007年",
+          content: "发布 iPhone",
+        },
+        {
+          time: "2010年",
+          content: "发布 iPad",
+        },
+        {
+          time: "2011年10月5日",
+          content: "史蒂夫·乔布斯去世",
+        },
+      ]
     }
   },
   methods: {
@@ -102,7 +141,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(245,245,245);
+  /*background-color: rgb(245,245,245);*/
 }
 
 .banner {
@@ -136,6 +175,14 @@ button:hover {
 
 .content {
   /*border: 1px solid red;*/
+}
+
+.card_time{
+  font-size: 14px;
+  font-weight: bold;
+}
+.card_content{
+  padding-left: 5px;
 }
 
 /*.content {*/
